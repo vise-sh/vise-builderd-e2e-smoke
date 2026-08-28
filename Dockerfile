@@ -28,3 +28,6 @@ CMD ["/usr/local/bin/vise-agent"]
 # rebuild marker: vise-agent now spawns /bin/sh by absolute path instead
 # of relying on PATH resolution (VISE-137) -- binary-only changes need
 # this too (VISE-133) or the build silently reuses the stale image.
+# rebuild marker: vise-agent now creates its exec cwd if the image didn't
+# already (VISE-137) -- binary-only changes need this too (VISE-133) or
+# the build silently reuses the stale image.
