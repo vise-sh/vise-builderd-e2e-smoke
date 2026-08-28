@@ -19,3 +19,6 @@ CMD ["/usr/local/bin/vise-agent"]
 # (VISE-137) -- content-addressing keys on this file + vise.toml, not the
 # rest of the build context, so a binary-only change needs this too
 # (VISE-133) or the build silently reuses the stale image.
+# rebuild marker: vise-agent now spawns /bin/sh by absolute path instead
+# of relying on PATH resolution (VISE-137) -- binary-only changes need
+# this too (VISE-133) or the build silently reuses the stale image.
