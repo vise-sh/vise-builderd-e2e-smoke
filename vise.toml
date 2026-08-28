@@ -1,0 +1,3 @@
+[runtime]
+name = "e2e-smoke-test"
+dockerfile = "./Dockerfile"
