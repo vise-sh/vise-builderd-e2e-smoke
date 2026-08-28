@@ -10,3 +10,7 @@ ENV VISE_AGENT_CMD=/usr/local/bin/echo_agent_fixture
 RUN git config --global credential.helper '!f() { echo "username=x-access-token"; echo "password=$GIT_PUSH_TOKEN"; }; f'
 EXPOSE 8791
 CMD ["/usr/local/bin/vise-agent"]
+# rebuild marker: echo_agent_fixture now emits vise/git/pushed after a
+# prompt -- content-addressing keys on this file + vise.toml, not the
+# rest of the build context, so a binary-only change needs this too
+# (VISE-133) or the build silently reuses the stale image.
