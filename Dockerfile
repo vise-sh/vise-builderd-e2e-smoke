@@ -14,3 +14,8 @@ CMD ["/usr/local/bin/vise-agent"]
 # prompt -- content-addressing keys on this file + vise.toml, not the
 # rest of the build context, so a binary-only change needs this too
 # (VISE-133) or the build silently reuses the stale image.
+# rebuild marker: vise-agent now intercepts vise/sandbox/exec and runs it
+# directly as a subprocess instead of forwarding to the wrapped agent
+# (VISE-137) -- content-addressing keys on this file + vise.toml, not the
+# rest of the build context, so a binary-only change needs this too
+# (VISE-133) or the build silently reuses the stale image.
